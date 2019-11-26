@@ -6,7 +6,7 @@ This repo is fork from https://github.com/eriklindernoren/PyTorch-YOLOv3 for fin
 The original owner of the repo has finished the training, inference and detection part.  
 And I add some functions that can make it more easily training on the SVHN dataset.
 <br />
-#### WHAT I HAVE DONE:
+## WHAT I HAVE DONE:
 * Read the trainning data from the .mat file of the SVHN dataset and convert it to the format that can trained by the YOLOv3,
   each line define a bounding box in `<calss number> <x_center> <y_center> <width> <height>`,  
   the coordinates is scaled between `[0, 1]`  
@@ -17,8 +17,8 @@ And I add some functions that can make it more easily training on the SVHN datas
   <br />
   ```
   {
-    "bbox": [7, 40, 40, 60]   => y1 x1 y2 x2 of bounding box
-    "label" [5]               => class
-    "score": [0.9]             > confidence
+    "bbox": [7, 40, 40, 60],   => y1 x1 y2 x2 of bounding box
+    "label" [5],               => class
+    "score": [0.9]             => confidence
   }
   ```
