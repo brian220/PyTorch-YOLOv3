@@ -127,5 +127,5 @@ def contstruct_train_list_file():
         fp.write("data/custom/images/" + str(j + 1) + ".png" + "\n")
     fp.close()    
 
-#construct_train_data("D:/user/Desktop/DLHW3/train/digitStruct.mat")
+construct_train_data("D:/user/Desktop/DLHW3/train/digitStruct.mat")
 contstruct_train_list_file()
