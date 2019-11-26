@@ -27,7 +27,6 @@ if __name__ == "__main__":
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    #os.makedirs("output", exist_ok=True)
     image_folder = 'data/test/'
     model_def = 'config/yolov3-custom.cfg'
     weights_path = 'checkpoints/yolov3_ckpt_40.pth'
@@ -85,14 +84,13 @@ if __name__ == "__main__":
         # Save image and detections
         imgs.extend(img_paths)
         img_detections.extend(detections)
-
-    print("\nSaving images:")
+    
+	
+    print("\nSaving result to json:")
     result_list = []
     # Iterate through images and save plot of detections
     for img_i, (path, detections) in enumerate(zip(imgs, img_detections)):
-
         print("(%d) Image: '%s'" % (img_i, path))
-
         # Create plot
         img = np.array(Image.open(path))
         
@@ -107,11 +105,9 @@ if __name__ == "__main__":
             n_cls_preds = len(unique_labels)
             # bbox_colors = random.sample(colors, n_cls_preds)
             for x1, y1, x2, y2, conf, cls_conf, cls_pred in detections:
-
-                #print("\t+ Label: %s, Conf: %.5f" % (classes[int(cls_pred)], cls_conf.item()))
-               
+                print("\t+ Label: %s, Conf: %.5f" % (classes[int(cls_pred)], cls_conf.item()))
                 score = float(cls_conf.item())
-                if (score > 0.7):
+                if (score > 0.2):
                     result_score.append(score)
 
                     newBox = []
@@ -132,5 +128,6 @@ if __name__ == "__main__":
             'label': result_label
         })
         
+		
     with open('result.json', 'w') as outfile:
         json.dump(result_list, outfile)
