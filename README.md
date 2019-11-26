@@ -18,10 +18,12 @@ the image `data/custom/images/1.png` has the label path `data/custom/labels/1.tx
 * In `parseJson.py`  
 Detect the img and store the detection result in json format  ,
 Which is a list of dictionaries and each dictionary represent an img detection result in the following structure:  
-```
-{
-  "bbox": [7, 40, 40, 60],   => y1 x1 y2 x2 of bounding box
-  "label" [5],               => class
-  "score": [0.9]             => confidence
-}
-```
+   ```
+   {
+     "bbox": [7, 40, 40, 60],   => y1 x1 y2 x2 of bounding box
+     "label" [5],               => class
+     "score": [0.9]             => confidence
+   }
+   ```
+* some pretrained weight `checkpoints/yolov3_ckpt_99.pth`
+The trainning weight for trainning 2000 imgs (train: 1200, valid: 800)
