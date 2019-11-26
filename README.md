@@ -16,7 +16,7 @@ the coordinates is scaled between `[0, 1]`,
 the image `data/custom/images/1.png` has the label path `data/custom/labels/1.txt`  
 
 * In `parseJson.py`  
-Detect the img and store the detection result in json format  ,
+Detect the img and store the detection result in json format,  
 Which is a list of dictionaries and each dictionary represent an img detection result in the following structure:  
    ```
    {
@@ -25,5 +25,5 @@ Which is a list of dictionaries and each dictionary represent an img detection r
      "score": [0.9]             => confidence
    }
    ```
-* some pretrained weight `checkpoints/yolov3_ckpt_99.pth`
-The trainning weight for trainning 2000 imgs (train: 1200, valid: 800)
+* some pretrained weight `checkpoints/yolov3_ckpt_99.pth`  
+The trainning weight for trainning 2000 imgs (train: 1200, valid: 800) for 99 epochs.
