@@ -28,7 +28,4 @@ which is a list of dictionaries and each dictionary represent an img detection r
    }
    ```
 
-* Some pretrained weight, `checkpoints/yolov3_ckpt_99.pth`  
-The trainning weight for trainning 2000 imgs (train: 1200, valid: 800) for 99 epochs.
-
 For more information on training, inference and detection, please reference to the oringinal repo.
