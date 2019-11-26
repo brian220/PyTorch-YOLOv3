@@ -5,7 +5,7 @@ This repo is fork from https://github.com/eriklindernoren/PyTorch-YOLOv3 for fin
 of the Selected Topics in Visual Ricognition using DeepLearning course.  
 <br />
 The original owner of the repo has finished the training, inference and detection part.  
-And I add some functions that can make it more easily training on the SVHN dataset.
+And I add some functions that can make it more easily trained on the SVHN dataset.
 <br />
 #### WHAT I HAVE DONE:
 
