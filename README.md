@@ -11,7 +11,7 @@ And I add some functions that can make it more easily training on the SVHN datas
 * In `constructData.py`   
 Read the trainning data from the .mat file of the SVHN dataset,  
 convert it to the format that can trained by the YOLOv3,  
-each line define a bounding box in `<calss number> <x_center> <y_center> <width> <height>`, 
+each line define a bounding box in `<calss number> <x_center> <y_center> <width> <height>`,  
 the coordinates is scaled between `[0, 1]`,   
 the image `data/custom/images/1.png` has the label path `data/custom/labels/1.txt`  
 
