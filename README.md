@@ -28,4 +28,10 @@ which is a list of dictionaries and each dictionary represent an img detection r
    }
    ```
 
+* If you want to detect the imgs on google Colab in order of filename,  
+  the unix filename order is different from the windows, which may cause the wrong detection result.  
+  You can use the following command to made all the file name become n digits, so the order will be same as the Windows:  
+  ```console
+  $ rename 'unless (/0+[0-9]{5}.png/) {s/^([0-9]{1,4}\.png)$/0000$1/g;s/0*([0-9]{5}\..*)/$1/}' *
+  ```
 For more information about training, inference and detection, please reference to the oringinal repo.
