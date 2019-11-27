@@ -11,7 +11,7 @@ And I add some functions that can make it more easily trained on the SVHN datase
 
 
 * In function `construct_train_data` of `constructData.py`   
-Read the trainning data from the .mat file of the SVHN dataset,  
+The function can read the trainning data from the .mat file of the SVHN dataset,  
 then convert it to the format that can be trained on the YOLOv3.  
 Each line in the format define a bounding box in `<calss number> <x_center> <y_center> <width> <height>`.  
 The coordinates is scaled between `[0, 1]`,   
